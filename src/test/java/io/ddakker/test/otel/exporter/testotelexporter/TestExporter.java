@@ -9,5 +9,11 @@ public class TestExporter {
         System.out.println("start");
         LogExporterService.getInstance().send("ac9ac80fd7ab426fb87f0e0b9acb29ad", "ac9ac80fd7ab426fb87f0e0b9acb29ad", null, Instant.now(), "INFO", "error~~~~~~~~~", "test", null);
         System.out.println("end");
+
+        try {
+            Thread.sleep(5000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
     }
 }
